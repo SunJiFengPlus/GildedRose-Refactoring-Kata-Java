@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    maven {
+        url = 'https://repo.maven.apache.org/maven2'
+    }
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/com.approvaltests/approvaltests
+    compile group: 'com.approvaltests', name: 'approvaltests', version: '4.0.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'
+}
+
+group = 'com.gildedrose'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+test {
+    useJUnitPlatform()
+}
